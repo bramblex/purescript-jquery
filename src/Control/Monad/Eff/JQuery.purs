@@ -41,6 +41,8 @@ foreign import setAttr :: forall eff a. String -> a -> JQuery -> Eff (dom :: DOM
 -- | Set multiple attributes.
 foreign import attr :: forall eff attr. { | attr } -> JQuery -> Eff (dom :: DOM | eff) JQuery
 
+foreign import getAttr :: forall eff attr. String -> JQuery -> Eff (dom :: DOM | eff) String
+
 -- | Set CSS properties.
 foreign import css :: forall eff css. { | css } -> JQuery -> Eff (dom :: DOM | eff) JQuery
 
